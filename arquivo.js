@@ -6,11 +6,6 @@ const projects = [
         link: 'https://github.com/Gustavo-Matias19/Spotifei'
     },
     {
-        title: 'API de Clima',
-        description: 'Uma API em Node.js que retorna a previsão do tempo de uma cidade.',
-        link: 'https://github.com/seu-usuario/api-clima'
-    },
-    {
         title: 'Site Pessoal (Portifório)',
         description: 'Um blog responsivo desenvolvido com React',
         link: 'https://github.com/Gustavo-Matias19/Portiforio'
@@ -40,19 +35,14 @@ const education = [
 // Dados dos seus certificados
 const certificates = [
     {
-        name: 'React: O Guia Completo',
+        name: 'Curso de Python 3 completo: PySide6, Django, Selenium, Regexp, Testes, TDD, POO, Design Patterns GoF, algoritmos e programação',
         platform: 'Udemy',
-        link: 'https://www.udemy.com/certificate/seu-certificado-react/'
+        link: 'https://www.udemy.com/course/python-3-do-zero-ao-avancado/'
     },
     {
-        name: 'JavaScript Avançado',
-        platform: 'Alura',
-        link: 'https://www.alura.com.br/certificate/seu-certificado-javascript/'
-    },
-    {
-        name: 'Curso de UI/UX Design',
-        platform: 'Coursera',
-        link: 'https://www.coursera.org/verify/seu-certificado-ui-ux/'
+        name: 'SQL para Análise de Dados: Do básico ao avançado',
+        platform: 'Udemy',
+        link: 'https://www.udemy.com/course/sql-para-analise-de-dados/?couponCode=MT180825G1'
     }
 ];
 
