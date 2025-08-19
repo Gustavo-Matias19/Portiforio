@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #007bff;
+}
+
+.header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.projects-section, .certificates-section, .about-section, .education-section {
+    margin-top: 30px;
+}
+
+.projects-section h2, .certificates-section h2, .about-section h2, .education-section h2 {
+    text-align: center;
+    color: #0056b3;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.project-list, .certificate-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-item, .certificate-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.project-item:hover, .certificate-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3, .certificate-item h3 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+.project-item p, .certificate-item p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.project-item a, .certificate-item a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-item a:hover, .certificate-item a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* Seção Sobre Mim */
+.about-content p {
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-item {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* Seção Formação Acadêmica */
+.education-list {
+    list-style: none;
+    padding: 0;
+}
+
+.education-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.education-item h3 {
+    margin: 0;
+    color: #0056b3;
+}
+
+.education-item p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 0.9em;
+}
+.header {
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  justify-content: center;  /* centraliza no meio */
+  gap: 20px; /* espaço entre os itens */
+}
+
+.info p {
+  margin: 0; /* tira espaço extra */
+}
