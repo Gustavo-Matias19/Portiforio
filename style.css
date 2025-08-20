@@ -142,10 +142,19 @@ body {
 
 .info {
   display: flex;
-  justify-content: center;  /* centraliza no meio */
-  gap: 20px; /* espaço entre os itens */
+  flex-wrap: wrap; /* Faz com que os itens quebrem a linha */
+  justify-content: center;
+  gap: 20px;
 }
 
 .info p {
-  margin: 0; /* tira espaço extra */
+  margin: 0;
+}
+
+/* O código a seguir só vai funcionar em telas de celular (até 600px de largura) */
+@media (max-width: 600px) {
+  .info {
+    flex-direction: column; /* Alinha os itens na vertical */
+    gap: 5px; /* Diminui o espaço entre os itens na vertical */
+  }
 }
