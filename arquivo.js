@@ -14,7 +14,7 @@ const projects = [
 
 // Dados do resumo profissional
 const about = {
-    bio: " Estudante de Ciência da Computação, com conhecimentos em Python e frameworks/bibliotecas , além de fundamentos de análise de dados. Busco oportunidade para aplicar e desenvolver habilidades técnicas, contribuindo para a melhoria de processos por meio da tecnologia.",
+    bio: "Estudante de Ciência da Computação, com uma base sólida em Python e experiência prática no uso de Flask para o desenvolvimento de aplicações e Selenium para automação. Tenho um conhecimento complementar em análise de dados e busco uma oportunidade para aplicar e desenvolver minhas habilidades técnicas, contribuindo para a melhoria de processos por meio da tecnologia.",
     skills: ["Python","Flask", "Selenium", "SQL", "Git"]
 };
 
