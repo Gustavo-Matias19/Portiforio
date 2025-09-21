@@ -6,7 +6,7 @@ const projects = [
         link: 'https://github.com/Gustavo-Matias19/Spotifei'
     },
     {
-        title: 'Site Pessoal (Portifório)',
+        title: 'Site Pessoal (Portfólio)',
         description: 'Um blog responsivo desenvolvido com React',
         link: 'https://github.com/Gustavo-Matias19/Portiforio'
     }
@@ -15,7 +15,7 @@ const projects = [
 // Dados do resumo profissional
 const about = {
     bio: "Estudante de Ciência da Computação, com uma base sólida em Python e experiência prática no uso de Flask para o desenvolvimento de aplicações e Selenium para automação. Tenho um conhecimento complementar em análise de dados e busco uma oportunidade para aplicar e desenvolver minhas habilidades técnicas, contribuindo para a melhoria de processos por meio da tecnologia.",
-    skills: ["Python","Flask", "Selenium", "SQL", "Git"]
+    skills: ["Python", "Flask", "Selenium", "SQL", "Git"]
 };
 
 // Dados da sua formação acadêmica
@@ -29,6 +29,16 @@ const education = [
         course: "Ciências da Computação",
         institution: "FUNDAÇÃO EDUCACIONAL INACIANA PADRE SABOIA DE MEDEIROS-(FEI)",
         period: "Ano de ínicio: 02/2024 | Ano de Conclusão: 12/2027"
+    }
+];
+
+// Dados da sua experiência profissional
+const experience = [
+    {
+        title: "Embalador",
+        company: "Jodi produtos",
+        period: "Ago/2025 - Atualmente",
+        description: "Responsável pelo empacotamento de produtos, com foco na organização e eficiência. Ocasionalmente, utilizei o **Microsoft Excel** para gerenciar dados e realizar tarefas simples, como a criação de uma função para monitorar aniversários da equipe."
     }
 ];
 
@@ -58,6 +68,22 @@ function renderAbout() {
     `;
 }
 
+function renderExperience() {
+    const experienceContainer = document.getElementById('experience-container');
+    
+    experience.forEach(item => {
+        const experienceItem = document.createElement('div');
+        experienceItem.className = 'experience-item';
+        
+        experienceItem.innerHTML = `
+            <h3>${item.title}</h3>
+            <p>${item.company} | ${item.period}</p>
+            <p>${item.description}</p>
+        `;
+        experienceContainer.appendChild(experienceItem);
+    });
+}
+
 function renderEducation() {
     const educationContainer = document.getElementById('education-container');
     
@@ -69,7 +95,6 @@ function renderEducation() {
             <h3>${item.course}</h3>
             <p>${item.institution} | ${item.period}</p>
         `;
-        
         educationContainer.appendChild(educationItem);
     });
 }
@@ -88,7 +113,6 @@ function renderProjects() {
                 Ver Projeto
             </a>
         `;
-        
         projectContainer.appendChild(projectItem);
     });
 }
@@ -107,7 +131,6 @@ function renderCertificates() {
                 Ver Certificado
             </a>
         `;
-        
         certificateContainer.appendChild(certificateItem);
     });
 }
@@ -118,6 +141,7 @@ function renderCertificates() {
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('current-year').textContent = new Date().getFullYear();
     renderAbout();
+    renderExperience();
     renderEducation();
     renderProjects();
     renderCertificates();
