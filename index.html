@@ -3,70 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gustavo Matias - Portfólio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Gustavo Matias — Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-         <header class="header">
-            <h1>Gustavo Matias Félix</h1>
-            <p class="subtitle">Estudante de Ciência da Computação</p>
-            <div class="contact-info">
-                <a href="mailto:gustavomatias248@gmail.com" class="contact-link" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                    <span>gustavomatias248@gmail.com</span>
-                </a>
-                <a href="tel:+5511993278971" class="contact-link" aria-label="Telefone">
-                    <i class="fas fa-phone"></i>
-                    <span>+55 11 97526-1818</span>
-                </a>
-                <a href="https://github.com/Gustavo-Matias19" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://www.linkedin.com/in/gustavomatias19" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
+    <div class="noise"></div>
+
+    <!-- SIDEBAR NAV -->
+    <nav class="sidenav">
+        <div class="sidenav-logo">GM</div>
+        <ul>
+            <li><a href="#sobre" data-label="Sobre"><i class="fas fa-user"></i></a></li>
+            <li><a href="#habilidades" data-label="Skills"><i class="fas fa-code"></i></a></li>
+            <li><a href="#experiencia" data-label="Exp."><i class="fas fa-briefcase"></i></a></li>
+            <li><a href="#projetos" data-label="Projetos"><i class="fas fa-folder-open"></i></a></li>
+            <li><a href="#formacao" data-label="Formação"><i class="fas fa-graduation-cap"></i></a></li>
+            <li><a href="#certificados" data-label="Certs"><i class="fas fa-award"></i></a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+
+        <!-- HERO -->
+        <header class="hero" id="hero">
+            <div class="hero-tag">Disponível para estágio</div>
+            <h1 class="hero-name">
+                <span class="line">Gustavo</span>
+                <span class="line accent-line">Matias</span>
+                <span class="line">Félix</span>
+            </h1>
+            <p class="hero-role">Estudante de Ciência da Computação</p>
+            <div class="hero-contact">
+                <a href="mailto:gustavomatias248@gmail.com" class="chip"><i class="fas fa-envelope"></i> gustavomatias248@gmail.com</a>
+                <a href="tel:+5511975261818" class="chip"><i class="fas fa-phone"></i> +55 11 97526-1818</a>
+                <a href="https://github.com/Gustavo-Matias19" target="_blank" rel="noopener noreferrer" class="chip"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/gustavomatias19/" target="_blank" rel="noopener noreferrer" class="chip"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://gustavomatias-sobre.vercel.app/" target="_blank" rel="noopener noreferrer" class="chip chip-accent"><i class="fas fa-globe"></i> Portfólio</a>
             </div>
+            <div class="hero-scroll-hint">Role para baixo <i class="fas fa-arrow-down"></i></div>
         </header>
 
-        <section class="about-section">
-            <h2>Sobre Mim</h2>
-            <div class="about-content" id="about-container">
+        <!-- SOBRE MIM -->
+        <section id="sobre" class="section">
+            <div class="section-label">01 — Sobre</div>
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-grid">
+                <p class="about-text" id="about-bio"></p>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <span class="stat-num">2024</span>
+                        <span class="stat-label">Início na FEI</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">2+</span>
+                        <span class="stat-label">Projetos</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">n8n</span>
+                        <span class="stat-label">Automação</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="experience-section">
-            <h2>Experiência Profissional</h2>
-            <div class="experience-list" id="experience-container">
-            </div>
+        <!-- HABILIDADES -->
+        <section id="habilidades" class="section">
+            <div class="section-label">02 — Skills</div>
+            <h2 class="section-title">Habilidades</h2>
+            <ul class="skills-grid" id="skills-container"></ul>
         </section>
 
-        <section class="education-section">
-            <h2>Formação Acadêmica</h2>
-            <div class="education-list" id="education-container">
-            </div>
+        <!-- EXPERIÊNCIA -->
+        <section id="experiencia" class="section">
+            <div class="section-label">03 — Experiência</div>
+            <h2 class="section-title">Experiência Profissional</h2>
+            <div id="experience-container"></div>
         </section>
 
-        <section class="projects-section">
-            <h2>Meus Projetos</h2>
-            <div class="project-list" id="project-container">
-            </div>
+        <!-- PROJETOS -->
+        <section id="projetos" class="section">
+            <div class="section-label">04 — Projetos</div>
+            <h2 class="section-title">Projetos</h2>
+            <div class="projects-grid" id="project-container"></div>
         </section>
 
-        <section class="certificates-section">
-            <h2>Meus Certificados</h2>
-            <div class="certificate-list" id="certificate-container">
-            </div>
+        <!-- FORMAÇÃO -->
+        <section id="formacao" class="section">
+            <div class="section-label">05 — Formação</div>
+            <h2 class="section-title">Formação Acadêmica</h2>
+            <div id="education-container"></div>
+        </section>
+
+        <!-- CERTIFICADOS -->
+        <section id="certificados" class="section">
+            <div class="section-label">06 — Certificados</div>
+            <h2 class="section-title">Certificados</h2>
+            <div class="certs-grid" id="certificate-container"></div>
         </section>
 
         <footer class="footer">
-            <p>&copy; <span id="current-year"></span> Gustavo Matias. Todos os direitos reservados.</p>
+            <p>© <span id="current-year"></span> Gustavo Matias Félix — Feito com <i class="fas fa-code"></i> e café.</p>
         </footer>
-    </div>
+    </main>
 
     <script src="arquivo.js"></script>
 </body>

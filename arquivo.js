@@ -1,148 +1,222 @@
-// Dados dos seus projetos
-const projects = [
+// ============================================================
+//  DADOS — baseados no currículo atualizado de Gustavo Matias
+// ============================================================
+
+const about = {
+    bio: "Estudante de Ciência da Computação com Python em nível intermediário/avançado e Excel avançado, com conhecimentos em SQL. Possuo experiência prática com automação de planilhas em Excel utilizando VBA e automação de processos com n8n. Tenho interesse em desenvolvimento de sistemas, análise de dados, automação de processos e finanças, buscando uma oportunidade de estágio para aplicar e desenvolver minhas habilidades técnicas.",
+    skills: ["Python", "n8n", "Excel Avançado", "VBA", "SQL", "Git / GitHub", "Banco de Dados Relacional", "POO"]
+};
+
+const experience = [
     {
-        title: 'SpotiFEI',
-        description: 'O Spotifei é uma plataforma para compartilhamento de informações sobre músicas. O projeto simula funcionalidades similares ao Spotify, com foco no cadastro, busca e gerenciamento de músicas, aplicando conceitos de orientação a objetos e persistência de dados com banco relacional.',
-        link: 'https://github.com/Gustavo-Matias19/Spotifei'
-    },
-    {
-        title: 'Site Pessoal (Portfólio)',
-        description: 'Um blog responsivo desenvolvido com React',
-        link: 'https://github.com/Gustavo-Matias19/Portiforio'
+        title: "Embalador",
+        company: "JMD",
+        period: "Ago/2025 — Atualmente",
+        description: "Atuação no empacotamento e organização de produtos com foco em eficiência e padronização dos processos. Utilização frequente do Microsoft Excel para controle e organização de dados internos. Desenvolvimento de planilhas automatizadas e aplicação de VBA para controle do fluxo de produtos e apoio às rotinas operacionais."
     }
 ];
 
-// Dados do resumo profissional
-const about = {
-    bio: "Estudante de Ciência da Computação, com uma base sólida em Python e experiência prática no uso de Flask para o desenvolvimento de aplicações e Selenium para automação. Tenho um conhecimento complementar em análise de dados e busco uma oportunidade para aplicar e desenvolver minhas habilidades técnicas, contribuindo para a melhoria de processos por meio da tecnologia.",
-    skills: ["Python", "Flask", "Selenium", "SQL", "Git"]
-};
-
-// Dados da sua formação acadêmica
 const education = [
+    {
+        course: "Ciência da Computação",
+        institution: "FEI — Fundação Educacional Inaciana Padre Sabóia de Medeiros",
+        period: "Fev/2024 — Dez/2027 (previsão)"
+    },
     {
         course: "Ensino Médio",
         institution: "Colégio Leonardo da Vinci",
         period: "Conclusão: 2023"
+    }
+];
+
+const projects = [
+    {
+        icon: "🤖",
+        title: "Automação Financeira com n8n",
+        description: "Workflows no n8n para automação de processos financeiros: coleta e consolidação de dados, alertas automáticos e integração entre planilhas e APIs. Projeto focado em lógica de automação em contextos reais do setor financeiro.",
+        link: "https://github.com/Gustavo-Matias19",
+        linkText: "Ver no GitHub"
     },
     {
-        course: "Ciências da Computação",
-        institution: "FUNDAÇÃO EDUCACIONAL INACIANA PADRE SABOIA DE MEDEIROS-(FEI)",
-        period: "Ano de ínicio: 02/2024 | Ano de Conclusão: 12/2027"
-    }
-];
-
-// Dados da sua experiência profissional
-const experience = [
+        icon: "📦",
+        title: "Controle de Fluxo de Produtos — JMD",
+        description: "Solução em Excel com VBA para controle de entrada e saída de produtos. Automatiza registros, validações e organização do fluxo de materiais, contribuindo para maior controle operacional e redução de erros manuais.",
+        link: "https://github.com/Gustavo-Matias19",
+        linkText: "Ver no GitHub"
+    },
     {
-        title: "Embalador",
-        company: "Jodi produtos",
-        period: "Ago/2025 - Atualmente",
-        description: "Responsável pelo empacotamento de produtos, com foco na organização e eficiência. Ocasionalmente, utilizei o **Microsoft Excel** para gerenciar dados e realizar tarefas simples, como a criação de uma função para monitorar aniversários da equipe."
+        icon: "🎵",
+        title: "SpotiFEI",
+        description: "Sistema para cadastro, busca e gerenciamento de músicas simulando funcionalidades de plataformas de streaming. Aplicação de POO, persistência de dados e banco de dados relacional.",
+        link: "https://github.com/Gustavo-Matias19/Spotifei",
+        linkText: "Ver no GitHub"
+    },
+    {
+        icon: "🌐",
+        title: "Site Pessoal (Portfólio)",
+        description: "Blog e portfólio pessoal desenvolvido com JavaScript puro, HTML e CSS. Apresenta projetos, habilidades e trajetória profissional de forma limpa e responsiva.",
+        link: "https://gustavomatias-sobre.vercel.app/",
+        linkText: "Acessar site"
     }
 ];
 
-// Dados dos seus certificados
 const certificates = [
     {
-        name: 'Curso de Python 3 completo: PySide6, Django, Selenium, Regexp, Testes, TDD, POO, Design Patterns GoF, algoritmos e programação',
-        platform: 'Udemy',
-        link: 'https://www.udemy.com/course/python-3-do-zero-ao-avancado/'
+        name: "Curso Avançado de Excel",
+        platform: "Bradesco",
+        link: "https://www.ev.org.br/"
     },
     {
-        name: 'SQL para Análise de Dados: Do básico ao avançado',
-        platform: 'Udemy',
-        link: 'https://www.udemy.com/course/sql-para-analise-de-dados/?couponCode=MT180825G1'
+        name: "Curso de Python 3 Completo: Django, Regexp, Testes, POO, Design Patterns GoF e mais",
+        platform: "Udemy",
+        link: "https://www.udemy.com/course/python-3-do-zero-ao-avancado/"
+    },
+    {
+        name: "SQL para Análise de Dados: Do básico ao avançado",
+        platform: "Udemy",
+        link: "https://www.udemy.com/course/sql-para-analise-de-dados/"
     }
 ];
 
-// --- Funções para Renderizar as Seções ---
+// ============================================================
+//  RENDER FUNCTIONS
+// ============================================================
 
 function renderAbout() {
-    const aboutContainer = document.getElementById('about-container');
-    const skillsListHtml = about.skills.map(skill => `<li class="skill-item">${skill}</li>`).join('');
-    
-    aboutContainer.innerHTML = `
-        <p>${about.bio}</p>
-        <ul class="skills-list">${skillsListHtml}</ul>
-    `;
+    document.getElementById("about-bio").textContent = about.bio;
+
+    const container = document.getElementById("skills-container");
+    about.skills.forEach(skill => {
+        const li = document.createElement("li");
+        li.className = "skill-tag";
+        li.textContent = skill;
+        container.appendChild(li);
+    });
 }
 
 function renderExperience() {
-    const experienceContainer = document.getElementById('experience-container');
-    
+    const container = document.getElementById("experience-container");
     experience.forEach(item => {
-        const experienceItem = document.createElement('div');
-        experienceItem.className = 'experience-item';
-        
-        experienceItem.innerHTML = `
-            <h3>${item.title}</h3>
-            <p>${item.company} | ${item.period}</p>
-            <p>${item.description}</p>
+        const div = document.createElement("div");
+        div.className = "timeline-item";
+        div.innerHTML = `
+            <div class="timeline-header">
+                <span class="timeline-title">${item.title}</span>
+                <span class="timeline-period">${item.period}</span>
+            </div>
+            <div class="timeline-sub">${item.company}</div>
+            <p class="timeline-desc">${item.description}</p>
         `;
-        experienceContainer.appendChild(experienceItem);
+        container.appendChild(div);
     });
 }
 
 function renderEducation() {
-    const educationContainer = document.getElementById('education-container');
-    
+    const container = document.getElementById("education-container");
     education.forEach(item => {
-        const educationItem = document.createElement('div');
-        educationItem.className = 'education-item';
-        
-        educationItem.innerHTML = `
-            <h3>${item.course}</h3>
-            <p>${item.institution} | ${item.period}</p>
+        const div = document.createElement("div");
+        div.className = "timeline-item";
+        div.innerHTML = `
+            <div class="timeline-header">
+                <span class="timeline-title">${item.course}</span>
+                <span class="timeline-period">${item.period}</span>
+            </div>
+            <div class="timeline-sub">${item.institution}</div>
         `;
-        educationContainer.appendChild(educationItem);
+        container.appendChild(div);
     });
 }
 
 function renderProjects() {
-    const projectContainer = document.getElementById('project-container');
-    
+    const container = document.getElementById("project-container");
     projects.forEach(project => {
-        const projectItem = document.createElement('div');
-        projectItem.className = 'project-item';
-        
-        projectItem.innerHTML = `
+        const div = document.createElement("div");
+        div.className = "project-card";
+        div.innerHTML = `
+            <div class="project-icon">${project.icon}</div>
             <h3>${project.title}</h3>
             <p>${project.description}</p>
-            <a href="${project.link}" target="_blank" rel="noopener noreferrer">
-                Ver Projeto
+            <a class="project-link" href="${project.link}" target="_blank" rel="noopener noreferrer">
+                ${project.linkText} <i class="fas fa-arrow-right"></i>
             </a>
         `;
-        projectContainer.appendChild(projectItem);
+        container.appendChild(div);
     });
 }
 
 function renderCertificates() {
-    const certificateContainer = document.getElementById('certificate-container');
-    
-    certificates.forEach(certificate => {
-        const certificateItem = document.createElement('div');
-        certificateItem.className = 'certificate-item';
-        
-        certificateItem.innerHTML = `
-            <h3>${certificate.name}</h3>
-            <p>Plataforma: ${certificate.platform}</p>
-            <a href="${certificate.link}" target="_blank" rel="noopener noreferrer">
-                Ver Certificado
-            </a>
+    const container = document.getElementById("certificate-container");
+    certificates.forEach(cert => {
+        const a = document.createElement("a");
+        a.className = "cert-card";
+        a.href = cert.link;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.innerHTML = `
+            <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+            <div>
+                <h3>${cert.name}</h3>
+                <span class="cert-platform">${cert.platform}</span>
+            </div>
+            <i class="fas fa-arrow-right cert-arrow"></i>
         `;
-        certificateContainer.appendChild(certificateItem);
+        container.appendChild(a);
     });
 }
 
-// --- Chamada das Funções ---
+// ============================================================
+//  SCROLL SPY — highlight active nav link
+// ============================================================
 
-// Define o ano atual no rodapé
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+function initScrollSpy() {
+    const sections = document.querySelectorAll("section[id], header[id]");
+    const navLinks = document.querySelectorAll(".sidenav a");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.toggle(
+                        "active",
+                        link.getAttribute("href") === `#${entry.target.id}`
+                    );
+                });
+            }
+        });
+    }, { threshold: 0.35 });
+
+    sections.forEach(s => observer.observe(s));
+}
+
+// ============================================================
+//  SECTION REVEAL ON SCROLL
+// ============================================================
+
+function initReveal() {
+    const sections = document.querySelectorAll(".section");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(s => observer.observe(s));
+}
+
+// ============================================================
+//  INIT
+// ============================================================
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("current-year").textContent = new Date().getFullYear();
     renderAbout();
     renderExperience();
     renderEducation();
     renderProjects();
     renderCertificates();
+    initScrollSpy();
+    initReveal();
 });
